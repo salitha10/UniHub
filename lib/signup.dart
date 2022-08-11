@@ -120,6 +120,16 @@ class SignupScreenState extends State<SignupScreen> {
         },
         child: Icon(Icons.add),
       ),
+      Container(
+                height: 50,
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                child: ElevatedButton(
+                  child: const Text('Sign Up'),
+                  onPressed: () {
+                    print(nameController.text);
+                    print(passwordController.text);
+                  },
+                )),
             Row(
               children: <Widget>[
                 const Text('Already have an Account?'),
