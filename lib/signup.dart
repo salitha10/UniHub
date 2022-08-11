@@ -59,6 +59,43 @@ class SignupScreenState extends State<SignupScreen> {
                 ),
               ),
             ),
+        Column(
+        children: [ 
+            RadioListTile(
+                title: Text("Male"),
+                value: "male", 
+                groupValue: gender, 
+                onChanged: (value){
+                    setState(() {
+                        gender = value.toString();
+                    });
+                },
+            ),
+
+            RadioListTile(
+                title: Text("Female"),
+                value: "female", 
+                groupValue: gender, 
+                onChanged: (value){
+                    setState(() {
+                        gender = value.toString();
+                    });
+                },
+            ),
+
+            RadioListTile(
+                    title: Text("Other"),
+                    value: "other", 
+                    groupValue: gender, 
+                    onChanged: (value){
+                    setState(() {
+                        gender = value.toString();
+                    });
+                    },
+            )
+        ],
+        )
+        
             Row(
               children: <Widget>[
                 const Text('Already have an Account?'),
